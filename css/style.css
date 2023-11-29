@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06A3DA;
+    --primary: #43AA13;
     --secondary: #34AD54;
-    --light: #EEF9FF;
-    --dark: #091E3E;
+    --light: #FCFAF2;
+    --dark: #193E2C;
 }
 
 
@@ -87,19 +87,20 @@ h6,
 
 .btn-primary,
 .btn-secondary {
-    color: #FFFFFF;
+    color: var(--light);
     box-shadow: inset 0 0 0 50px transparent;
     font-weight: 700;
 }
 
 .btn-primary:hover {
+    color: var(--light);
     box-shadow: inset 0 0 0 0 var(--primary);
-    color: rgb(4, 5, 22);
+   
 }
 
 .btn-secondary:hover {
     box-shadow: inset 0 0 0 0 var(--secondary);
-    color: rgb(4, 5, 22);
+   
 }
 
 .btn-square {
