@@ -58,13 +58,13 @@ const Hero = () => {
 
               <Link
                 href="/quote"
-                class="btn btn-primary py-md-3 mt-4 px-md-5 me-3 animated slideInLeft"
+                className="btn btn-primary py-md-3 mt-4 px-md-5 me-3 animated slideInLeft"
               >
                 Free Quote
               </Link>
               <Link
                 href="/contact"
-                class="btn btn-outline-light py-md-3 mt-4 px-md-5 animated slideInRight"
+                className="btn btn-outline-light py-md-3 mt-4 px-md-5 animated slideInRight"
               >
                 Our Services
               </Link>
