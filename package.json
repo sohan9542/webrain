@@ -1,0 +1,29 @@
+{
+  "name": "lepure-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@sanity/client": "^6.9.1",
+    "axios": "^1.6.2",
+    "next": "14.0.2",
+    "next-sanity": "^7.0.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.12.0",
+    "react-portable-text": "^0.6.0",
+    "swiper": "^11.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
+  }
+}
