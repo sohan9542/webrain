@@ -14,12 +14,12 @@ console.log(item)
   return (
     <Link href={`/blog/${item?.slug?.current}`}  className="w-full">
       <div className="blog-item bg-[#FAF5E2] rounded overflow-hidden">
-        <div className="blog-img position-relative overflow-hidden">
+        <div className="blog-img position-relative h-[332px] overflow-hidden">
           <Image
             width={500}
             height={500}
             src={item?.mainImage}
-            className="img-fluid"
+            className="img-fluid "
           />
           {/* <img className="img-fluid" src="img/blog-1.jpg" alt=""> */}
           <p
@@ -41,7 +41,7 @@ console.log(item)
           </div>
 
           
-          <h4 className="mb-3">{item?.title}</h4>
+          <h4 className="mb-3 text-[25px]">{item?.title}</h4>
           <p className="pb-3 text-dark">
             Dolor et eos labore stet justo sed est sed sed sed dolor stet
             amet

@@ -19,7 +19,9 @@ body{
   --dark_c: #193e2c;
 }
 
-
+.container{
+  margin: 0 auto!important;
+}
 .dfd{
   color: #34ad540b;
 }

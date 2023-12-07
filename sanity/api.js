@@ -36,3 +36,26 @@ export async function get__all__post() {
 
   return allPosts;
 }
+
+
+export async function get__latest__post() {
+  const latestPosts = await client.fetch(
+    groq`*[_type == "post"] | order(publishedAt desc) [0..2] {
+      _id,
+      "mainImage": mainImage.asset->url,
+      title,
+      slug,
+      "author": *[_type == 'author' && _id == ^.author._ref][0] {
+        name
+      },
+      "categories": *[_type == 'category' && _id in ^.categories[]._ref] {
+        title
+      },
+      publishedAt,
+      content,
+      meta
+    }`
+  );
+
+  return latestPosts;
+}

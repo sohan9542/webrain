@@ -40,7 +40,7 @@ const About = () => {
           </button>
   return (
     <div className="w-full  min-h-screen flex flex-col items-center justify-center" >
-      <div className="grid container grid-cols-1 lg:grid-cols-12 gap-5">
+      <div className="grid container items-center grid-cols-1 lg:grid-cols-12 gap-5">
         <div className="lg:col-span-5" style={{ minHeight: "500px" }}>
         <Swiper
              effect={'creative'}
