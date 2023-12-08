@@ -20,7 +20,7 @@ const BlogSection = () => {
           //   style="max-width: 600px;"
         >
           <h5 className="fw-bold text-primary text-uppercase">Latest Blog</h5>
-          <h1 className="mb-0">What's Best For Your Platform?</h1>
+          <h1 className="mb-0 text-white">What's Best For Your Platform?</h1>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px]">
           {posts.map((item, ind) => (

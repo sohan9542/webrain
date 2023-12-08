@@ -16,13 +16,15 @@ const Empower = () => {
   };
   return (
     <div className="  grid grid-cols-1 lg:grid-cols-5">
-         <div className="lg:col-span-2 relative p-[16px] lg:p-[40px] bg-[#FAF5E2]">
+      <div className="lg:col-span-2 relative p-[16px] lg:p-[40px] bg-dark">
         <div className="relative z-20">
-          <h1 className="text-txt onest text-[40px] lg:text-[48px] font-[500] leading-[40px] lg:leading-[48px]">
-            Empowering Student Entrepreneurs
+          <h1 className="text-txt text-white onest text-[40px] lg:text-[48px] font-[500] leading-[40px] lg:leading-[48px]">
+            WEBRAIN'S CORE VALUE
           </h1>
-          <p className="text-[18px] text-txt mt-[24px] leading-[24px]">
-          You can build your start-up full time, leveraging networks in the US and EU, whilst obtaining a master's degree. no need to wait for years of experience. With us, your transformation from student to entrepreneur begins today.
+          <p className="text-[18px] text-white text-txt mt-[24px] leading-[24px]">
+           Webrain's core values evolved with us as the company grew and we learned from our experiences. <br />
+           <br />
+            They epitomise what we want to achieve, and they might change in the future, as we aim higher and higher. We think of those values as important to our culture and individual sense of accomplishment.
           </p>
         </div>
         <div className="absolute hidden lg:block top-2 left-2 z-10">
@@ -35,7 +37,7 @@ const Empower = () => {
           >
             <path
               d="M9.8152 0L56 9.81796L46.1847 56L0 46.182L9.8152 0Z"
-              fill="#EDE5C4"
+              fill="#193E2C"
             />
           </svg>
         </div>
@@ -59,9 +61,9 @@ const Empower = () => {
             onMouseOut={() => setHoverActive(false)}
             onMouseDown={handleClick}
             onMouseUp={handleMouseLeave}
-            className={`flex justify-center w-full border-[1px] lg:w-auto wtkwu uppercase items-center gap-2 px-[24px] py-[12px]    ${clicked ? 'text-[#FCFAF2] bg-[#0B2217] border-[#0B2217]': 'text-[#193E2C] border-[#193E2C] hover:bg-[#193E2C] hover:text-white'}`}
+            className={`flex justify-center w-full border-[1px] lg:w-auto wtkwu uppercase items-center gap-2 px-[24px] py-[12px]    ${clicked ? 'text-[#FCFAF2] bg-[#0B2217] border-[#0B2217]' : 'text-white border-white hover:bg-[#143022] hover:text-white'}`}
           >
-            Want to know why us?
+            Know More About Us
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -71,7 +73,7 @@ const Empower = () => {
             >
               <path
                 d="M13.477 9.16658L9.00698 4.69657L10.1855 3.51807L16.6673 9.99992L10.1855 16.4817L9.00698 15.3032L13.477 10.8332H3.33398V9.16658H13.477Z"
-                fill={hoverActive ? "#fff" : "#193E2C"}
+                fill={hoverActive ? "#fff" : "#fff"}
               />
             </svg>
           </button>
@@ -80,13 +82,13 @@ const Empower = () => {
       <div className="lg:col-span-3">
         <Image
           alt="logo"
-          src={"/img/carousel-1.jpg"}
+          src={"/img/core.jpg"}
           width={800}
           height={550}
           className="w-full object-cover h-[275px] lg:h-[550px]"
         />
       </div>
-     
+
     </div>
   );
 };

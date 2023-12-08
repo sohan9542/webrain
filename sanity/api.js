@@ -27,7 +27,8 @@ export async function get__all__post() {
       },
       publishedAt,
       content,
-      meta
+      meta,
+      metadesc
     }`
   );
 
@@ -53,9 +54,45 @@ export async function get__latest__post() {
       },
       publishedAt,
       content,
-      meta
+      meta,
+      metadesc
     }`
   );
 
   return latestPosts;
+}
+
+export async function get__post__by__slug(slug) {
+  const post = await client.fetch(
+    groq`*[_type == "post" && slug.current == $slug]{
+      _id,
+      "mainImage": mainImage.asset->url,
+      title,
+      slug,
+      "author": *[_type == 'author' && _id == ^.author._ref][0] {
+        name
+        // Add other author fields as needed
+      },
+      "categories": *[_type == 'category' && _id in ^.categories[]._ref] {
+        title
+        // Add other category fields as needed
+      },
+      publishedAt,
+      content,
+      meta,
+      metadesc
+    }`,
+    { slug } // Pass the slug as a parameter to the query
+  );
+
+  // Return the single post if found, or null if not found
+  return post[0] || null;
+}
+
+export async function get__all__categories() {
+  const category = await client.fetch(
+    groq`*[_type == "category"]`,
+  );
+  return category
+
 }

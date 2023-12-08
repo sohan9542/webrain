@@ -13,13 +13,13 @@ const BlogComponent = ({ item }) => {
 console.log(item)
   return (
     <Link href={`/blog/${item?.slug?.current}`}  className="w-full">
-      <div className="blog-item bg-[#FAF5E2] rounded overflow-hidden">
+      <div className="blog-item bg-dark rounded overflow-hidden">
         <div className="blog-img position-relative h-[332px] overflow-hidden">
           <Image
             width={500}
             height={500}
             src={item?.mainImage}
-            className="img-fluid "
+            className=" h-full w-full object-cover "
           />
           {/* <img className="img-fluid" src="img/blog-1.jpg" alt=""> */}
           <p
@@ -29,24 +29,25 @@ console.log(item)
             {item?.categories?.[0]?.title}
           </p>
         </div>
-        <div className="p-4">
-          <div className="d-flex mb-3">
-            <small className="me-3 text-dark">
-              <i className="far fa-user text-dark me-2"></i>{item?.author?.name}
+        <div className="p-4 flex flex-col justify-between h-[297px]">
+       <div>
+       <div className="d-flex mb-3">
+            <small className="me-3 text-white">
+              <i className="far fa-user text-white me-2"></i>{item?.author?.name}
             </small>
-            <small className='text-dark'>
-              <i className="far fa-calendar-alt text-dark me-2"></i>
+            <small className='text-white'>
+              <i className="far fa-calendar-alt text-white me-2"></i>
               {format__date(item?.publishedAt)}
             </small>
           </div>
 
           
-          <h4 className="mb-3 text-[25px]">{item?.title}</h4>
-          <p className="pb-3 text-dark">
-            Dolor et eos labore stet justo sed est sed sed sed dolor stet
-            amet
+          <h4 className="mb-3 text-[25px] text-white">{item?.title}</h4>
+          <p className="pb-3  text-white">
+           {item?.metadesc}
           </p>
-          <p className="text-uppercase text-dark" >
+       </div>
+          <p className="text-uppercase text-white" >
             Read More <i className="bi bi-arrow-right"></i>
           </p>
         </div>

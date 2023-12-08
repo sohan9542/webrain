@@ -7,9 +7,9 @@ const Testimonials = () => {
   const [active, setActive] = useState(100);
   return (
     <div className="container py-[80px]">
-      <div className="flex flex-col lg:flex-row lg:items-end  lg:pl-[50px]  lg:gap-[40px]">
+      <div className="flex flex-col mt-20 lg:flex-row lg:items-end  lg:pl-[50px]  lg:gap-[40px]">
         <div className="relative ">
-          <h1 className="font-[300] leading-[32px] lg:leading-[64px] relative z-20 onest text-txt text-[32px] lg:text-[56px]">
+          <h1 className="font-[300] leading-[32px] text-white lg:leading-[64px] relative z-20 onest text-txt text-[32px] lg:text-[56px]">
             What Clients Say <br /> About Our Service
           </h1>
           <div className="-top-6 lg:-top-1 absolute right-7 lg:-right-5 z-10">
@@ -22,13 +22,13 @@ const Testimonials = () => {
             >
               <path
                 d="M9.8152 0L56 9.81796L46.1847 56L0 46.182L9.8152 0Z"
-                fill="#E5EBDD"
+                fill="#193E2C"
               />
             </svg>
           </div>
         </div>
       </div>
-      <div className="w-full mt-[40px] hidden lg:block  gap-[12px]">
+      <div className="w-full mt-[40px] mb-20 hidden lg:block  gap-[12px]">
         <Swiper
           slidesPerView={3}
           spaceBetween={16}
@@ -58,7 +58,7 @@ const Testimonials = () => {
               <div className="w-full overflow-hidden parent_h relative">
                 <Image
                   alt="logo"
-                  src={"/img/l3.jpg"}
+                  src={"/img/core.jpg"}
                   width={800}
                   height={550}
                   className="w-full object-cover object-top hv_img h-[250px]"
@@ -161,7 +161,7 @@ const Testimonials = () => {
           ))}
         </Swiper>
       </div>
-      <div className="w-full mt-[40px]  lg:hidden  ">
+      <div className="w-full mt-[40px] mb-20  lg:hidden  ">
 
       <Swiper
           slidesPerView={1}
@@ -189,7 +189,7 @@ const Testimonials = () => {
            <div className="w-full overflow-hidden  relative">
          <Image
            alt="logo"
-           src={"/img/l3.jpg"}
+           src={"/img/core.jpg"}
            width={800}
            height={550}
            className="w-full object-cover hv_img h-[250px]"

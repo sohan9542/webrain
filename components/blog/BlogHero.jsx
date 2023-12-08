@@ -11,8 +11,8 @@ const BlogHero = () => {
             width={2500}
             alt=""
             height={2500}
-            className="  w-full h-full object-top object-cover "
-            src={"/img/carousel-1.jpg"}
+            className="  w-full h-full object-center object-cover "
+            src={"/img/blog.jpg"}
           />
         </div>
 

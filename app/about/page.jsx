@@ -9,7 +9,7 @@ import AboutHome from "@/components/home/About"
 import Startup from '@/components/about/Startup';
 const About = () => {
   return (
-    <main className="relative min-h-screen">
+    <main className="relative bg-[#143022] min-h-screen">
         <Navbar/>
         <AboutHero/>
         <Empower/>

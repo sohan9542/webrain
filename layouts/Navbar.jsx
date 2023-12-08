@@ -19,9 +19,9 @@ const Navbar = () => {
       </div>
       <div className="flex items-center gap-3">
         <ActiveLink href={"/"} children={"Home"} />
-      
-        <ActiveLink href={"/services"} children={"Services"} />
+       
         <ActiveLink href={"/about"} children={"About"} />
+        <ActiveLink href={"/services"} children={"Services"} />
         <ActiveLink href={"/blogs"} children={"Blog"} />
         <ActiveLink href={"/contact"} children={"Contact"} />
       </div>

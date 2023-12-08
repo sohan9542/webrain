@@ -7,7 +7,7 @@ import React from 'react'
 
 const Blog = () => {
   return (
-    <div className='relative min-h-screen w-full'>
+    <div className='relative  min-h-screen w-full'>
 <Navbar/>
 <BlogHero/>
 <BlogGrid/>

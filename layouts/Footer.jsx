@@ -5,8 +5,8 @@ import React,{useState} from "react";
 const Footer = () => {
   const [active, setactive] = useState(0)
   return (
-    <div className="mt-[40px]   w-full px-[16px] lg:px-[80px]">
-      <div className="h-[1px] w-full bg-[#BCD4C7]"></div>
+    <div className="mt-[40px] bg-[#143022]   w-full px-[16px] lg:px-[80px]">
+      <div className="h-[1px] w-full bg-dark"></div>
       <div className="py-[80px] hidden lg:flex items-start flex-col lg:flex-row justify-between w-full">
         <div>
         <Image
@@ -14,14 +14,14 @@ const Footer = () => {
             height={100}
             className="w-[180px]"
             alt=""
-            src={"/logob.svg"}
+            src={"/logo.svg"}
           />
           {/* <p className="mt-[12px] leading-[16px] text-txt font-[400] text-[16px]">
             Schedays Associazione culturale e di promozione sociale <br />{" "}
             Piazza Santa Maria in Via Lata 11, 16128 Genoa, Italy
           </p> */}
           <div className="py-[20px]">
-            <p className=" leading-[16px] text-txt font-[400] text-[16px]">
+            <p className=" leading-[16px] text-white font-[400] text-[16px]">
               Mail : <span className="text-[#43AA13]">webrainp@gmail.com</span>
             </p>
             {/* <p className=" leading-[16px] mt-[12px] text-txt font-[400] text-[16px]">
@@ -30,31 +30,31 @@ const Footer = () => {
           </div>
           <div className="flex items-center ">
         <a
-          className=" text-dark hover:bg-[#FAF5E2] py-1 px-2 me-2"
+          className=" text-pr hover:bg-darkpy-1 px-2 me-2"
           href=""
         >
           <i className="fa fa-envelope-open -ml-[1px] "></i>
         </a>
         <a
-         className=" text-dark hover:bg-[#FAF5E2] py-1 flex items-center justify-center pl-2 me-2"
+         className=" text-pr hover:bg-darkpy-1 flex items-center justify-center pl-2 me-2"
           href=""
         >
           <i className="fa fa-phone-alt me-2"></i>
         </a>
         <a
-         className=" text-dark hover:bg-[#FAF5E2] py-1 px-2 me-2"
+         className=" text-pr hover:bg-darkpy-1 px-2 me-2"
           href=""
         >
           <i className="fab fa-linkedin-in fw-normal"></i>
         </a>
         <a
-         className=" text-dark hover:bg-[#FAF5E2] py-1 px-2 me-2"
+         className=" text-pr hover:bg-darkpy-1 px-2 me-2"
           href=""
         >
           <i className="fab fa-instagram fw-normal"></i>
         </a>
         <a
-         className=" text-dark hover:bg-[#FAF5E2] py-1 px-2 me-2"
+         className=" text-pr hover:bg-darkpy-1 px-2 me-2"
           href=""
         >
           <i className="fab -ml-[2px] fa-youtube fw-normal"></i>
@@ -62,14 +62,14 @@ const Footer = () => {
       </div>
         </div>
         <div className="flex items-start gap-[80px]">
-          <p className="onest text-[16px] leading-[16px] font-[300] text-txt">
+          <p className="onest text-[16px] text-white leading-[16px] font-[300] text-txt">
             Navigation
           </p>
           <div>
             <div className="gap-[40px] flex items-center">
               <Link
                 href="/"
-                className="flex items-center underline text-dark  leading-[16px] text-txt text-[14px] gap-[10px]"
+                className="flex items-center underline text-pr  leading-[16px] text-txt text-[14px] gap-[10px]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -80,14 +80,14 @@ const Footer = () => {
                 >
                   <path
                     d="M4.16806 9.33343L4.16797 3.33352L5.5013 3.3335L5.50138 8.0001L12.2826 8.00016L9.64944 5.36701L10.5922 4.4242L14.8349 8.66683L10.5922 12.9095L9.64944 11.9667L12.2826 9.3335L4.16806 9.33343Z"
-                    fill="#202020"
+                    fill="#fff"
                   />
                 </svg>
                 Home
               </Link>
               <Link
                 href="/about"
-                className="flex items-center text-dark underline leading-[16px] text-txt text-[14px] gap-[10px]"
+                className="flex items-center text-pr underline leading-[16px] text-txt text-[14px] gap-[10px]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -98,14 +98,14 @@ const Footer = () => {
                 >
                   <path
                     d="M4.16806 9.33343L4.16797 3.33352L5.5013 3.3335L5.50138 8.0001L12.2826 8.00016L9.64944 5.36701L10.5922 4.4242L14.8349 8.66683L10.5922 12.9095L9.64944 11.9667L12.2826 9.3335L4.16806 9.33343Z"
-                    fill="#202020"
+                    fill="#fff"
                   />
                 </svg>
                 About Us
               </Link>
               <Link
                 href="/services"
-                className="flex items-center text-dark  underline leading-[16px] text-txt text-[14px] gap-[10px]"
+                className="flex items-center text-pr  underline leading-[16px] text-txt text-[14px] gap-[10px]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ const Footer = () => {
                 >
                   <path
                     d="M4.16806 9.33343L4.16797 3.33352L5.5013 3.3335L5.50138 8.0001L12.2826 8.00016L9.64944 5.36701L10.5922 4.4242L14.8349 8.66683L10.5922 12.9095L9.64944 11.9667L12.2826 9.3335L4.16806 9.33343Z"
-                    fill="#202020"
+                    fill="#fff"
                   />
                 </svg>
                 Services
@@ -125,7 +125,7 @@ const Footer = () => {
             <div className="gap-[40px] mt-4 flex items-center">
               <Link
                 href="/blogs"
-                className="flex items-center text-dark underline leading-[16px] text-txt text-[14px] gap-[10px]"
+                className="flex items-center text-pr underline leading-[16px] text-txt text-[14px] gap-[10px]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -136,14 +136,14 @@ const Footer = () => {
                 >
                   <path
                     d="M4.16806 9.33343L4.16797 3.33352L5.5013 3.3335L5.50138 8.0001L12.2826 8.00016L9.64944 5.36701L10.5922 4.4242L14.8349 8.66683L10.5922 12.9095L9.64944 11.9667L12.2826 9.3335L4.16806 9.33343Z"
-                    fill="#202020"
+                    fill="#fff"
                   />
                 </svg>
                 Blog
               </Link>
               <Link
                 href="/contact"
-                className="flex items-center text-dark underline leading-[16px] text-txt text-[14px] gap-[10px]"
+                className="flex items-center text-pr underline leading-[16px] text-txt text-[14px] gap-[10px]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@ const Footer = () => {
                 >
                   <path
                     d="M4.16806 9.33343L4.16797 3.33352L5.5013 3.3335L5.50138 8.0001L12.2826 8.00016L9.64944 5.36701L10.5922 4.4242L14.8349 8.66683L10.5922 12.9095L9.64944 11.9667L12.2826 9.3335L4.16806 9.33343Z"
-                    fill="#202020"
+                    fill="#fff"
                   />
                 </svg>
                 Contact
@@ -165,8 +165,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="transform rotate-90 mt-10">
-            <h1 className="onest font-[200] text-[40px] text-txt leading-[40px]">2023 ©</h1>
-            <p className="text-[16px] leading-[16px] pt-[4px] text-txt">All rights reserved</p>
+            <h1 className="onest font-[200] text-[40px] text-white leading-[40px]">2023 ©</h1>
+            <p className="text-[16px] leading-[16px] pt-[4px]  text-white">All rights reserved</p>
         </div>
       </div>
       <div className="py-[40px] relative flex lg:hidden items-start flex-col lg:flex-row justify-between w-full">

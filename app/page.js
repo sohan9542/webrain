@@ -19,7 +19,7 @@ export default function Home() {
   // }, [])
 
   return (
-    <main className="relative min-h-screen">
+    <main className="relative bg-[#143022] min-h-screen">
       <Navbar />
       <Hero />
       <About />

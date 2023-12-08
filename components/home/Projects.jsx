@@ -12,7 +12,7 @@ const Explore = () => {
     <div className="px-[16px] lg:px-[40px] pb-[24px]  lg:py-[80px]">
       <div className="flex items-center justify-center w-full lg:pl-[50px]  lg:gap-[40px]">
         <div className="relative  ">
-          <h1 className="font-[300] leading-[32px] lg:leading-[64px] relative z-20 onest text-txt text-[32px] lg:text-[56px]">
+          <h1 className="font-[300] text-white leading-[32px] lg:leading-[64px] relative z-20 onest text-txt text-[32px] lg:text-[56px]">
             Explore Recent Projects.
           </h1>
           <div className="-top-4 lg:-top-1 absolute right-3 lg:-right-8 z-10">
@@ -25,7 +25,7 @@ const Explore = () => {
             >
               <path
                 d="M9.8152 0L56 9.81796L46.1847 56L0 46.182L9.8152 0Z"
-                fill="#E5EBDD"
+                fill="#193E2C"
               />
             </svg>
           </div>
@@ -49,12 +49,9 @@ const Explore = () => {
         }}
         loop={true}
         speed={1000}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: true,
-        }}
+       
         navigation={true}
-        modules={[Autoplay, EffectCreative, Navigation]}
+        modules={[ EffectCreative, Navigation]}
         className="mySwiper"
       >
         {[1, 2, 3, 4, 5].map((item, ind) => (
@@ -67,7 +64,7 @@ const Explore = () => {
               <div className="w-full overflow-hidden  h-full">
                 <Image
                   alt="logo"
-                  src={"/img/carousel-1.jpg"}
+                  src={"/img/s2.jpg"}
                   width={1000}
                   height={700}
                   className="w-full object-cover n_img h-[250px] lg:h-[600px]"

@@ -8,10 +8,10 @@ const Startup = () => {
           width={1200}
           height={600}
           className="w-full h-[400px] lg:h-[550px] s_img object-cover"
-          src={"/img/carousel-2.jpg"}
+          src={"/img/s1.jpg"}
         />
       </div>
-      <a target="_blank" href="https://calendly.com/ges-guglielmo/30min?month=2023-11" className="w-full h-[400px] lg:h-full md_rv overflow-hidden relative bg-[#193E2C]">
+      <a target="_blank" href="https://calendly.com/d/5cz-73r-4nv" className="w-full h-[400px] lg:h-full md_rv overflow-hidden relative bg-[#193E2C]">
         <div className="absolute rv -bottom-[700px]   -left-[300px] w-full bg-[#43AA13] opacity-[0.08] h-full"></div>
         <div className="absolute top-0 left-0 z-20 w-full h-full p-[24px]">
           <p  className="text-[40px] popins  text-[#FCFAF2] font-[300] leading-[48px]">

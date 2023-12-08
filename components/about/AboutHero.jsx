@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 const AboutHero = () => {
   const [clicked, setClicked] = useState(false);
   const [clicked2, setClicked2] = useState(false);
   const [open, setOpen] = useState(false);
 
   return (
-    <div className=" bg-dark   min-h-[700px]   f w-full">
+    <div className="    min-h-[700px]   f w-full">
     <div className="  w-full pt-[81px] relative">
         <div className="relative -mt-5 h-[300px] lg:h-[320px]">
       
@@ -14,8 +15,9 @@ const AboutHero = () => {
             width={2500}
             alt=""
             height={2500}
-            className="  w-full h-full object-top object-cover "
-            src={"/img/carousel-1.jpg"}
+           
+            className="  w-full h-full object-center object-cover "
+            src={"/img/s1.jpg"}
           />
         </div>
 
@@ -29,7 +31,7 @@ const AboutHero = () => {
           </p>
       
           <div className="flex pt-[24px] flex-col lg:flex-row items-center justify-center gap-[16px]">
-            <button
+            <Link href={'/blogs'} 
               onMouseDown={() => setClicked(true)}
               // onMouseLeave={() => setClicked(false)}
               onMouseUp={() => setClicked(false)}
@@ -37,20 +39,20 @@ const AboutHero = () => {
                 !clicked
                   ? "hover:bg-[#FCFAF2] hover:text-[#193E2C]"
                   : "bg-[#E0DBC9] text-[#193E2C]"
-              } font-[500] border  border-[#FCFAF2] text-[16px] w-full lg:w-auto px-[24px] py-[12px]`}
+              } font-[500] border  border-[#FCFAF2] text-[16px] w-full lg:w-auto px-[54px] py-[12px]`}
             >
-              Explore our programs
-            </button>
+              READ OUR BLOGS
+            </Link>
             <a
               target="_blank"
-              href={"https://calendly.com/ges-guglielmo/30min?month=2023-11"}
+              href={"https://calendly.com/d/5cz-73r-4nv"}
               onMouseDown={() => setClicked2(true)}
               onMouseUp={() => setClicked2(false)}
               className={`text-[#FCFAF2] wtkwu uppercase ${
                 !clicked2 ? "hover:bg-[#5FD528]" : "bg-[#38970A]"
               } border-[1px] bg-[#43AA13] border-[#43AA13] hover:text-white text-[16px] flex items-center justify-center gap-2 w-full lg:w-auto px-[64px] py-[12px]`}
             >
-              Apply now
+              GET A QUOTE
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

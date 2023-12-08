@@ -14,7 +14,7 @@ import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { EffectCube, Autoplay } from "swiper/modules";
 const Hero = () => {
   return (
-    <section className="w-full bg-dark  relative min-h-screen    h-full flex items-center justify-center ">
+    <section className="w-full   relative min-h-screen    h-full flex items-center justify-center ">
       {/* <video
         // ref={videoRef}
         width="100%"
@@ -31,7 +31,7 @@ const Hero = () => {
         Your browser does not support the video tag.
       </video> */}
 
-      <div className=" absolute z-40 top-0 left-0 min-h-screen w-full h-full bg-[#193e2cc4]  ">
+      <div className=" absolute z-40 top-0 left-0 min-h-screen w-full h-full   ">
         <div className=" w-[300px] absolute lg:w-[700px] top-[300px]  lg:top-20 right-10 lg:right-0 z-10">
           <Image
             width={400}
@@ -56,14 +56,15 @@ const Hero = () => {
               Web Applications, Websites, Products, APIs
               </p>
 
-              <Link
-                href="/quote"
+              <a
+                href="https://calendly.com/d/5cz-73r-4nv"
+                target="_blank"
                 className="btn btn-primary py-md-3 mt-4 px-md-5 me-3 animated slideInLeft"
               >
-                Free Quote
-              </Link>
+                Contact Us
+              </a>
               <Link
-                href="/contact"
+                href="/services"
                 className="btn btn-outline-light py-md-3 mt-4 px-md-5 animated slideInRight"
               >
                 Our Services
@@ -112,7 +113,7 @@ const Hero = () => {
                   width={2000}
                   height={2000}
                   alt=""
-                  src="/img/h1.jpg"
+                  src="/img/home.jpg"
                   className="w-full h-[500px] lg:h-[500px] xl:h-[600px] object-cover"
                 />
               </SwiperSlide>
@@ -121,7 +122,7 @@ const Hero = () => {
                   width={2000}
                   height={2000}
                   alt=""
-                  src="/img/h2.jpg"
+                  src="/img/home1.jpg"
                   className="w-full h-[500px] lg:h-[500px] xl:h-[600px] object-cover"
                 />
               </SwiperSlide>
@@ -130,19 +131,11 @@ const Hero = () => {
                   width={2000}
                   height={2000}
                   alt=""
-                  src="/img/h3.jpg"
-                  className="w-full h-[500px] lg:h-[500px] xl:h-[600px] object-cover"
+                  src="/img/home2.svg"
+                  className="w-full h-[500px] bg-white lg:h-[500px] xl:h-[600px] object-cover"
                 />
               </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  width={2000}
-                  height={2000}
-                  alt=""
-                  src="/img/h2.jpg"
-                  className="w-full h-[500px] lg:h-[500px] xl:h-[600px] object-cover"
-                />
-              </SwiperSlide>
+           
             </Swiper>
             </div>
        
