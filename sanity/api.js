@@ -96,3 +96,20 @@ export async function get__all__categories() {
   return category
 
 }
+
+
+export async function get__projects() {
+  const latestPosts = await client.fetch(
+    groq`*[_type == "projects"] | order(publishedAt desc) [0..5] {
+      _id,
+      "mainImage": mainImage.asset->url,
+      name,
+      publishedAt,
+      view,
+      desc,
+      live
+    }`
+  );
+
+  return latestPosts;
+}

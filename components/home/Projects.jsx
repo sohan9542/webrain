@@ -1,13 +1,21 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import Swiper from "swiper";
 import "swiper/css/effect-creative";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay, EffectCreative, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
+import { get__projects } from "@/sanity/api";
 const Explore = () => {
   const [hover1, sethover1] = useState(100);
-
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    async function get__new__projects() {
+      const project = await get__projects();
+      setProjects(project);
+    }
+    get__new__projects();
+  }, []);
   return (
     <div className="px-[16px] lg:px-[40px] pb-[24px]  lg:py-[80px]">
       <div className="flex items-center justify-center w-full lg:pl-[50px]  lg:gap-[40px]">
@@ -49,37 +57,36 @@ const Explore = () => {
         }}
         loop={true}
         speed={1000}
-       
         navigation={true}
-        modules={[ EffectCreative, Navigation]}
+        modules={[EffectCreative, Navigation]}
         className="mySwiper"
       >
-        {[1, 2, 3, 4, 5].map((item, ind) => (
-          <SwiperSlide>
+        {projects.map((item, ind) => (
+          <SwiperSlide key={ind}>
             <div
               className={`pt-[16px] px-[80px] lg:pt-[40px] grid grid-cols-1 ${
                 hover1 === ind && "n_parent"
-              } lg:grid-cols-2`}
+              } lg:grid-cols-5`}
             >
-              <div className="w-full overflow-hidden  h-full">
+              <div className="w-full overflow-hidden lg:col-span-3  h-full">
                 <Image
                   alt="logo"
-                  src={"/img/s2.jpg"}
+                  src={item?.mainImage}
                   width={1000}
                   height={700}
-                  className="w-full object-cover n_img h-[250px] lg:h-[600px]"
+                  className="w-full  max-w-full object-cover object-top  n_img h-[250px] lg:h-[600px]"
                 />
               </div>
               <div
                 onMouseOver={() => sethover1(ind)}
                 onMouseOut={() => sethover1(100)}
-                className="bg-[#193E2C] overflow-hidden flex flex-col relative h-full w-full justify-between p-[16px] lg:p-[40px]"
+                className="bg-[#193E2C] overflow-hidden lg:col-span-2 flex flex-col relative h-full w-full justify-between p-[16px] lg:p-[40px]"
               >
                 <div>
                   <h1 className="text-[32px] leading-[32px]  lg:text-[40px] text-[#FCFAF2] onest font-[500] lg:leading-[48px]">
-                    Global Startup Program
+                    {item?.name}
                   </h1>
-                  <div className="mt-[16px] flex flex-wrap  items-center gap-x-[16px] gap-y-[8px] lg:gap-[16px]">
+                  {/* <div className="mt-[16px] flex flex-wrap  items-center gap-x-[16px] gap-y-[8px] lg:gap-[16px]">
                     <div className="flex items-center gap-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +138,7 @@ const Explore = () => {
                         15 Students
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="w-full hidden lg:block  tbt pt-[40px] lg:pt-0 ">
                   <div className="flex items-center gap-1">
@@ -197,12 +204,10 @@ const Explore = () => {
                     </svg>
                   </div>
                   <p className="text-[24px] leading-[32px] pb-[16px] lg:pb-[110px] text-[#FCFAF2] pt-[8px]">
-                    Rated by the 15 students joining our program
+                    {item?.view}
                   </p>
                   <p className="text-[18px] lg:hidden leading-[24px] lg:text-[24px]  text-[#FCFAF2] pt-[8px]">
-                    Study in the US at Georgetown University and in Europe at
-                    the University of Genoa. Earn a prestigious European
-                    Master's degree.
+                    {item?.view}
                   </p>
                 </div>
                 <div className="w-full block lg:hidden   pt-[40px] lg:pt-0 ">
@@ -269,28 +274,23 @@ const Explore = () => {
                     </svg>
                   </div>
                   <p className="text-[24px] leading-[32px] pb-[16px] lg:pb-[110px] text-[#FCFAF2] pt-[8px]">
-                    Rated by the 15 students joining our program
+                    {item?.view}
                   </p>
                   <p className="text-[18px] lg:hidden leading-[24px] lg:text-[24px]  text-[#FCFAF2] pt-[8px]">
-                    Study in the US at Georgetown University and in Europe at
-                    the University of Genoa. Earn a prestigious European
-                    Master's degree.
+                    {item?.view}
                   </p>
                 </div>
                 <div className="-bottom-[700px] hidden lg:block main_d rotate-2 -left-8  w-[1600px] opacity-[0.06] h-full absolute z-10  bg-[#FCFAF2]"></div>
                 <div className="absolute open_d hidden lg:block -bottom-[220px] h-full z-20 left-0 w-full">
                   <p className="text-[18px] lg:text-[24px] px-[40px] text-[#FCFAF2]   pt-[40px]">
-                    Embark on a transformative journey with our "Global Startup
-                    Odyssey" program. Spend a semester in the dynamic ecosystem
-                    of the United States at Georgetown University and another
-                    semester in the heart of entrepreneurial Europe at the
-                    University of Genoa. Upon completion, you'll graduate with a
-                    prestigious European Master's degree.
+                    {item?.desc}
                   </p>
                 </div>
                 <div className="w-full flex mt-[40px] lg:mt-0 relative lg:absolute lg:p-[40px] bottom-0 left-0 z-20 items-center justify-end">
-                  <button
-                    className={`text-[#FCFAF2] wtkwu uppercase hover:bg-[#54b825] bg-[#43AA13] border-[#43AA13]  text-[16px] flex items-center justify-center gap-2 w-full lg:w-auto lg:px-[64px] py-[12px]`}
+                  <a
+                    href={item?.live}
+                    target="_blank"
+                    className={`text-[#FCFAF2] wtkwu  uppercase hover:bg-[#54b825] bg-[#43AA13] border-[#43AA13]  text-[16px] flex items-center justify-center gap-2 w-full lg:w-auto lg:px-[64px] py-[12px]`}
                   >
                     Live Preview
                     <svg
@@ -305,7 +305,7 @@ const Explore = () => {
                         fill="#FCFAF2"
                       />
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
