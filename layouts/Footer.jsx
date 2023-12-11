@@ -141,8 +141,9 @@ const Footer = () => {
                 </svg>
                 Blog
               </Link>
-              <Link
-                href="/contact"
+              <a
+              target="_blank"
+                href="https://calendly.com/d/5cz-73r-4nv"
                 className="flex items-center text-pr underline leading-[16px] text-txt text-[14px] gap-[10px]"
               >
                 <svg
@@ -158,7 +159,7 @@ const Footer = () => {
                   />
                 </svg>
                 Contact
-              </Link>
+              </a>
        
             </div>
         

@@ -17,7 +17,7 @@ const Explore = () => {
     get__new__projects();
   }, []);
   return (
-    <div className="px-[16px] lg:px-[40px] pb-[24px]  lg:py-[80px]">
+    <div className="px-[16px] lg:px-[20px] pb-[24px]  lg:py-[80px]">
       <div className="flex items-center justify-center w-full lg:pl-[50px]  lg:gap-[40px]">
         <div className="relative  ">
           <h1 className="font-[300] text-white leading-[32px] lg:leading-[64px] relative z-20 onest text-txt text-[32px] lg:text-[56px]">
@@ -40,7 +40,7 @@ const Explore = () => {
         </div>
       </div>
 
-      <Swiper
+    {projects?.length > 0 &&   <Swiper
         grabCursor={true}
         effect={"creative"}
         creativeEffect={{
@@ -64,18 +64,20 @@ const Explore = () => {
         {projects.map((item, ind) => (
           <SwiperSlide key={ind}>
             <div
-              className={`pt-[16px] px-[80px] lg:pt-[40px] grid grid-cols-1 ${
+              className={`pt-[16px] px-[60px] lg:pt-[40px] grid grid-cols-1 ${
                 hover1 === ind && "n_parent"
               } lg:grid-cols-5`}
             >
               <div className="w-full overflow-hidden lg:col-span-3  h-full">
-                <Image
+              <div className="h-[250px] lg:h-[600px] overflow-hidden">
+              <Image
                   alt="logo"
                   src={item?.mainImage}
                   width={1000}
                   height={700}
-                  className="w-full  max-w-full object-cover object-top  n_img h-[250px] lg:h-[600px]"
+                  className=" w-full h-full  object-top  n_img "
                 />
+              </div>
               </div>
               <div
                 onMouseOver={() => sethover1(ind)}
@@ -311,7 +313,7 @@ const Explore = () => {
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper>}
     </div>
   );
 };

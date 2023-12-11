@@ -40,8 +40,8 @@ const About = () => {
   </button>
   return (
     <div className="w-full  min-h-screen flex flex-col items-center justify-center" >
-      <div className="grid container items-center grid-cols-1 lg:grid-cols-12 gap-5">
-        <div className="lg:col-span-5" style={{ minHeight: "500px" }}>
+      <div className="grid px-3 lg:container items-center grid-cols-1 lg:grid-cols-12 gap-5">
+        <div className=" hidden lg:block lg:col-span-5" style={{ minHeight: "500px" }}>
           <Image
             width={1000}
             height={1000}
@@ -116,7 +116,7 @@ const About = () => {
               </SwiperSlide>
             </Swiper> */}
         </div>
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 mt-40 lg:mt-0">
           <div className="position-relative pb-3 ">
             <h5 className="fw-bold text-pr text-uppercase">About WEBRAIN</h5>
             <h1 className="mb-0 text-[32px] text-white lg:text-[56px]">
@@ -177,6 +177,81 @@ const About = () => {
             </svg>
           </a>
        </div>
+        </div>
+        <div className="  lg:hidden lg:col-span-5 " >
+          <Image
+            width={1000}
+            height={1000}
+            alt=""
+            src="/img/about.svg"
+            className="w-full  transform scale-110"
+          />
+          {/* <Swiper
+             effect={'creative'}
+            //  creativeEffect={{
+            //    prev: {
+            //      shadow: true,
+            //      translate: [0, 0, -800],
+            //      rotate: [180, 0, 0],
+            //    },
+            //    next: {
+            //      shadow: true,
+            //      translate: [0, 0, -800],
+            //      rotate: [-180, 0, 0],
+            //    },
+            //  }}
+            creativeEffect={{
+                prev: {
+                  shadow: true,
+                  translate: ['-125%', 0, -800],
+                  rotate: [0, 0, -90],
+                },
+                next: {
+                  shadow: true,
+                  translate: ['125%', 0, -800],
+                  rotate: [0, 0, 90],
+                },
+              }}
+              speed={2000}
+                   autoplay={{
+                     delay: 2000,
+                     disableOnInteraction: false,
+                   }}
+           loop={true}
+              modules={[EffectCreative, Autoplay]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+               
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  width={1000}
+                  height={1000}
+                  alt=""
+                  src="/img/h1.jpg"
+                  className="w-full h-[550px] object-cover"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  width={1000}
+                  height={1000}
+                  alt=""
+                  src="/img/h3.jpg"
+                  className="w-full h-[550px] object-cover"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  width={1000}
+                  height={1000}
+                  alt=""
+                  src="/img/h2.jpg"
+                  className="w-full h-[550px] object-cover"
+                />
+              </SwiperSlide>
+            </Swiper> */}
         </div>
       </div>
     </div>

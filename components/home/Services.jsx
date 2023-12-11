@@ -3,8 +3,8 @@ import Link from "next/link";
 const Services = () => {
   return (
     <>
-      <div className="container-fluid  wow fadeInUp" data-wow-delay="0.1s">
-        <div className="container py-5">
+      <div className="w-full" >
+        <div className="px-3 lg:container py-5">
           <div
             className="text-center position-relative pb-3 mb-5 mx-auto"
             style={{ maxWidth: "600px" }}
@@ -14,7 +14,7 @@ const Services = () => {
             </h5>
             <h1 className="mb-0 text-[32px] lg:text-[56px] text-white" >We're a full service digital agency</h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-[50px] w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] lg:gap-[50px] w-full">
             <div className="service-item  bg-dark w-full border-[1px] border-pr rounded d-flex flex-column align-items-center justify-content-center text-center">
               <div className="service-icon ">
                 {/* <i className="bi bi-amd text-white"></i> */}
@@ -79,7 +79,7 @@ const Services = () => {
                 <i className="bi bi-arrow-right"></i>
               </Link>
             </div>
-            <a href="https://calendly.com/d/5cz-73r-4nv" target="_blank" style={{height:"100%"}} className="bg-dark btn btn-primary w-full cursor-pointer   h-full ">
+            <a href="https://calendly.com/d/5cz-73r-4nv" target="_blank"  className="bg-dark btn btn-primary w-full cursor-pointer h-[300px]   lg:h-full ">
               <div style={{height:"100%"}} className="flex items-center justify-center flex-col h-full w-full">
                 <div className="service-icon flex items-center justify-center">
                   <i className="fa fa-plus  text-[28px]  text-white"></i>

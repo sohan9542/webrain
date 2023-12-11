@@ -42,7 +42,7 @@ const Hero = () => {
           />
         </div>
 
-        <div className=" h-full px-[50px] ">
+        <div className=" h-full mt-20 lg:mt-10 px-3 lg:px-[50px] ">
           <div className="w-full grid relative z-20 items-center h-full grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
             <div className="relative">
               <p className="text-white uppercase text-[18px]  pb-2">
@@ -87,7 +87,7 @@ const Hero = () => {
               />
             </div>
 
-            <div className="lg:pr-[100px]">
+            <div className=" w-full  lg:pr-[100px]">
             <Swiper
               effect={"cube"}
               grabCursor={true}
@@ -102,7 +102,7 @@ const Hero = () => {
               speed={3000}
                    autoplay={{
                      delay: 2000,
-                     disableOnInteraction: true,
+                     disableOnInteraction: false,
                    }}
            
               modules={[EffectCube, Autoplay]}

@@ -10,7 +10,7 @@ export const format__date = (isoDate) => {
   return formattedDate
 }
 const BlogComponent = ({ item }) => {
-console.log(item)
+
   return (
     <Link href={`/blog/${item?.slug?.current}`}  className="w-full">
       <div className="blog-item bg-dark rounded overflow-hidden">
