@@ -10,11 +10,11 @@ const Footer = () => {
       <div className="py-[80px] hidden lg:flex items-start flex-col lg:flex-row justify-between w-full">
         <div>
         <Image
-            width={100}
-            height={100}
+            width={500}
+            height={500}
             className="w-[180px]"
             alt=""
-            src={"/logo.svg"}
+            src={"/logo.png"}
           />
           {/* <p className="mt-[12px] leading-[16px] text-txt font-[400] text-[16px]">
             Schedays Associazione culturale e di promozione sociale <br />{" "}

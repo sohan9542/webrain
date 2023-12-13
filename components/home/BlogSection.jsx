@@ -13,7 +13,7 @@ const BlogSection = () => {
   }, []);
   return (
     <div className="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div className="container py-5">
+      <div className="px-3 lg:container py-5">
         <div
           className=" text-center position-relative pb-3 mb-5 mx-auto"
           style={{ maxWidth: "600px" }}

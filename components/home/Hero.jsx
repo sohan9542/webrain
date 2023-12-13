@@ -31,7 +31,7 @@ const Hero = () => {
         Your browser does not support the video tag.
       </video> */}
 
-      <div className=" absolute z-40 top-0 left-0 min-h-screen w-full h-full   ">
+      <div className="relative z-40 top-0 left-0 min-h-screen w-full h-full   ">
         <div className=" w-[300px] absolute lg:w-[700px] top-[300px]  lg:top-20 right-10 lg:right-0 z-10">
           <Image
             width={400}
@@ -42,7 +42,7 @@ const Hero = () => {
           />
         </div>
 
-        <div className=" h-full mt-20 lg:mt-10 px-3 lg:px-[50px] ">
+        <div className=" min-h-screen flex items-center justify-center  h-full  lg:mt-10 px-3 lg:px-[50px] ">
           <div className="w-full grid relative z-20 items-center h-full grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
             <div className="relative">
               <p className="text-white uppercase text-[18px]  pb-2">

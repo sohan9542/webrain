@@ -42,8 +42,8 @@ const BlogComponent = ({ item }) => {
           </div>
 
           
-          <h4 className="mb-3 text-[25px] text-white">{item?.title}</h4>
-          <p className="pb-3  text-white">
+          <h4 className="mb-3 text-[20px] lg:text-[25px] text-white">{item?.title}</h4>
+          <p className="pb-3 text-[14px] lg:text-[16px]  text-white">
            {item?.metadesc}
           </p>
        </div>

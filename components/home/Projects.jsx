@@ -17,7 +17,7 @@ const Explore = () => {
     get__new__projects();
   }, []);
   return (
-    <div className="px-[16px] lg:px-[20px] pb-[24px]  lg:py-[80px]">
+    <div className="px-3 lg:px-[20px] pb-[24px]  lg:py-[80px]">
       <div className="flex items-center justify-center w-full lg:pl-[50px]  lg:gap-[40px]">
         <div className="relative  ">
           <h1 className="font-[300] text-white leading-[32px] lg:leading-[64px] relative z-20 onest text-txt text-[32px] lg:text-[56px]">
@@ -40,7 +40,8 @@ const Explore = () => {
         </div>
       </div>
 
-    {projects?.length > 0 &&   <Swiper
+<div className=" hidden lg:block">
+{projects?.length > 0 &&   <Swiper
         grabCursor={true}
         effect={"creative"}
         creativeEffect={{
@@ -64,7 +65,7 @@ const Explore = () => {
         {projects.map((item, ind) => (
           <SwiperSlide key={ind}>
             <div
-              className={`pt-[16px] px-[60px] lg:pt-[40px] grid grid-cols-1 ${
+              className={`pt-[16px] lg:px-[60px] lg:pt-[40px] grid grid-cols-1 ${
                 hover1 === ind && "n_parent"
               } lg:grid-cols-5`}
             >
@@ -314,6 +315,232 @@ const Explore = () => {
           </SwiperSlide>
         ))}
       </Swiper>}
+</div>
+<div className="  lg:hidden">
+{projects?.length > 0 &&   <Swiper
+        grabCursor={true}
+        effect={"creative"}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, 0, -800],
+            rotate: [180, 0, 0],
+          },
+          next: {
+            shadow: true,
+            translate: [0, 0, -800],
+            rotate: [-180, 0, 0],
+          },
+        }}
+        loop={true}
+        speed={1000}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: true,
+        }}
+        modules={[EffectCreative, Autoplay]}
+        className="mySwiper"
+      >
+        {projects.map((item, ind) => (
+          <SwiperSlide key={ind}>
+            <div
+              className={`pt-[16px] lg:px-[60px] lg:pt-[40px] grid grid-cols-1 ${
+                hover1 === ind && "n_parent"
+              } lg:grid-cols-5`}
+            >
+              <div className="w-full overflow-hidden lg:col-span-3  h-full">
+              <div className="h-[250px] lg:h-[600px] overflow-hidden">
+              <Image
+                  alt="logo"
+                  src={item?.mainImage}
+                  width={1000}
+                  height={700}
+                  className=" w-full h-full  object-top  n_img "
+                />
+              </div>
+              </div>
+              <div
+                onMouseOver={() => sethover1(ind)}
+                onMouseOut={() => sethover1(100)}
+                className="bg-[#193E2C] overflow-hidden lg:col-span-2 flex flex-col relative h-full w-full justify-between p-[16px] lg:p-[40px]"
+              >
+                <div>
+                  <h1 className="text-[32px] leading-[32px]  lg:text-[40px] text-[#FCFAF2] onest font-[500] lg:leading-[48px]">
+                    {item?.name}
+                  </h1>
+              
+                </div>
+                <div className="w-full hidden lg:block  tbt pt-[40px] lg:pt-0 ">
+                  <div className="flex items-center gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.0008 17L6.12295 20.5902L7.72105 13.8906L2.49023 9.40983L9.35577 8.85942L12.0008 2.5L14.6458 8.85942L21.5114 9.40983L16.2806 13.8906L17.8787 20.5902L12.0008 17Z"
+                        fill="#FCFAF2"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.0008 17L6.12295 20.5902L7.72105 13.8906L2.49023 9.40983L9.35577 8.85942L12.0008 2.5L14.6458 8.85942L21.5114 9.40983L16.2806 13.8906L17.8787 20.5902L12.0008 17Z"
+                        fill="#FCFAF2"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.0008 17L6.12295 20.5902L7.72105 13.8906L2.49023 9.40983L9.35577 8.85942L12.0008 2.5L14.6458 8.85942L21.5114 9.40983L16.2806 13.8906L17.8787 20.5902L12.0008 17Z"
+                        fill="#FCFAF2"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.0008 17L6.12295 20.5902L7.72105 13.8906L2.49023 9.40983L9.35577 8.85942L12.0008 2.5L14.6458 8.85942L21.5114 9.40983L16.2806 13.8906L17.8787 20.5902L12.0008 17Z"
+                        fill="#FCFAF2"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.0008 14.6564L14.8175 16.3769L14.0517 13.1664L16.5583 11.0192L13.2683 10.7554L12.0008 7.70792V14.6564ZM12.0008 17L6.12295 20.5902L7.72105 13.8906L2.49023 9.40983L9.35577 8.85942L12.0008 2.5L14.6458 8.85942L21.5114 9.40983L16.2806 13.8906L17.8787 20.5902L12.0008 17Z"
+                        fill="#FCFAF2"
+                      />
+                    </svg>
+                  </div>
+                  <p className="text-[24px] hidden lg:block leading-[32px] pb-[16px] lg:pb-[110px] text-[#FCFAF2] pt-[8px]">
+                    {item?.view}
+                  </p>
+                  <p className="text-[18px] lg:hidden leading-[24px] lg:text-[24px]  text-[#FCFAF2] pt-[8px]">
+                    {item?.view}
+                  </p>
+                </div>
+                <div className="w-full block lg:hidden   pt-[20px] lg:pt-0 ">
+                  <div className="flex items-center gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.0008 17L6.12295 20.5902L7.72105 13.8906L2.49023 9.40983L9.35577 8.85942L12.0008 2.5L14.6458 8.85942L21.5114 9.40983L16.2806 13.8906L17.8787 20.5902L12.0008 17Z"
+                        fill="#FCFAF2"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.0008 17L6.12295 20.5902L7.72105 13.8906L2.49023 9.40983L9.35577 8.85942L12.0008 2.5L14.6458 8.85942L21.5114 9.40983L16.2806 13.8906L17.8787 20.5902L12.0008 17Z"
+                        fill="#FCFAF2"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.0008 17L6.12295 20.5902L7.72105 13.8906L2.49023 9.40983L9.35577 8.85942L12.0008 2.5L14.6458 8.85942L21.5114 9.40983L16.2806 13.8906L17.8787 20.5902L12.0008 17Z"
+                        fill="#FCFAF2"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.0008 17L6.12295 20.5902L7.72105 13.8906L2.49023 9.40983L9.35577 8.85942L12.0008 2.5L14.6458 8.85942L21.5114 9.40983L16.2806 13.8906L17.8787 20.5902L12.0008 17Z"
+                        fill="#FCFAF2"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.0008 14.6564L14.8175 16.3769L14.0517 13.1664L16.5583 11.0192L13.2683 10.7554L12.0008 7.70792V14.6564ZM12.0008 17L6.12295 20.5902L7.72105 13.8906L2.49023 9.40983L9.35577 8.85942L12.0008 2.5L14.6458 8.85942L21.5114 9.40983L16.2806 13.8906L17.8787 20.5902L12.0008 17Z"
+                        fill="#FCFAF2"
+                      />
+                    </svg>
+                  </div>
+             
+                  <p className="text-[18px] lg:hidden leading-[24px] lg:text-[24px]  text-[#FCFAF2] pt-[8px]">
+                    {item?.view}
+                  </p>
+                </div>
+                <div className="-bottom-[700px] hidden lg:block main_d rotate-2 -left-8  w-[1600px] opacity-[0.06] h-full absolute z-10  bg-[#FCFAF2]"></div>
+                <div className="absolute open_d hidden lg:block -bottom-[220px] h-full z-20 left-0 w-full">
+                  <p className="text-[18px] lg:text-[24px] px-[40px] text-[#FCFAF2]   pt-[40px]">
+                    {item?.desc}
+                  </p>
+                </div>
+                <div className="w-full flex mt-[40px] lg:mt-0 relative lg:absolute lg:p-[40px] bottom-0 left-0 z-20 items-center justify-end">
+                  <a
+                    href={item?.live}
+                    target="_blank"
+                    className={`text-[#FCFAF2] wtkwu  uppercase hover:bg-[#54b825] bg-[#43AA13] border-[#43AA13]  text-[16px] flex items-center justify-center gap-2 w-full lg:w-auto lg:px-[64px] py-[12px]`}
+                  >
+                    Live Preview
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.0032 9.41421L7.39663 18.0208L5.98242 16.6066L14.589 8H7.00324V6H18.0032V17H16.0032V9.41421Z"
+                        fill="#FCFAF2"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>}
+</div>
     </div>
   );
 };

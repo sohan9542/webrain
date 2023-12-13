@@ -11,11 +11,11 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <Link href="/">
             <Image
-              width={100}
-              height={100}
+              width={700}
+              height={700}
               className="w-[180px]"
               alt=""
-              src={"/logo.svg"}
+              src={"/logo.png"}
             />
           </Link>
         </div>

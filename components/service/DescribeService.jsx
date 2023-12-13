@@ -99,7 +99,7 @@ const DescribeService = () => {
                             <i className="fa fa-check text-primary me-3"></i>Landing Pages
                         </h5>
                         <h5 className="mb-3 text-white">
-                            <i className="fa fa-check text-primary me-3"></i>Community Forums
+                            <i className="fa fa-check text-primary me-3"></i>Portfolio Websites
                         </h5>
                         <h5 className="mb-3 text-white">
                             <i className="fa fa-check text-primary me-3"></i>Educational Platforms

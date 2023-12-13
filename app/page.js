@@ -8,7 +8,7 @@ import Services from "@/components/home/Services";
 import Testimonials from "@/components/home/Testimonial";
 import Footer from "@/layouts/Footer";
 import Navbar from "@/layouts/Navbar";
-
+import Head from "next/head";
 import { useEffect } from "react";
 export default function Home() {
   // useEffect(() => {
@@ -20,6 +20,8 @@ export default function Home() {
 
   return (
     <main className="relative bg-[#143022] min-h-screen">
+
+
       <Navbar />
       <Hero />
       <About />

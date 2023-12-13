@@ -116,7 +116,7 @@ const About = () => {
               </SwiperSlide>
             </Swiper> */}
         </div>
-        <div className="lg:col-span-7 mt-40 lg:mt-0">
+        <div className="lg:col-span-7 mt-20 lg:mt-0">
           <div className="position-relative pb-3 ">
             <h5 className="fw-bold text-pr text-uppercase">About WEBRAIN</h5>
             <h1 className="mb-0 text-[32px] text-white lg:text-[56px]">

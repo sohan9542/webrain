@@ -15,6 +15,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
+      
+      <link rel="icon" href={'/tab2.png'} />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
           href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
