@@ -42,7 +42,7 @@ const Hero = () => {
           />
         </div>
 
-        <div className=" min-h-screen flex items-center justify-center  h-full  lg:mt-10 px-3 lg:px-[50px] ">
+        <div className=" min-h-screen flex items-center justify-center  h-full mt-20  lg:mt-10 px-3 lg:px-[50px] ">
           <div className="w-full grid relative z-20 items-center h-full grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
             <div className="relative">
               <p className="text-white uppercase text-[18px]  pb-2">

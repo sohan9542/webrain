@@ -113,3 +113,20 @@ export async function get__projects() {
 
   return latestPosts;
 }
+
+
+export async function get__reviews() {
+  const latestPosts = await client.fetch(
+    groq`*[_type == "reviews"]{
+      _id,
+      "mainImage": mainImage.asset->url,
+      name,
+      position,
+      review,
+      link,
+      "logo": logo.asset->url,
+    }`
+  );
+
+  return latestPosts;
+}

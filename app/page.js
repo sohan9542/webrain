@@ -25,9 +25,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Explore />
       <Services />
       <Testimonials />
-      <Explore />
+    
       <BlogSection />
       <Footer/>
     </main>
