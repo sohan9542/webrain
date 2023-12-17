@@ -12,8 +12,8 @@ const BlogSection = () => {
     get__new__post();
   }, []);
   return (
-    <div className="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div className="px-3 lg:container py-5">
+    <div className="w-full">
+      <div className="px-3 mx-auto lg:container py-5">
         <div
           className=" text-center position-relative pb-3 mb-5 mx-auto"
           style={{ maxWidth: "600px" }}

@@ -16,7 +16,7 @@ const Testimonials = () => {
     get__new__reviesw();
   }, []);
   return (
-    <div className="px-3 lg:container ">
+    <div className="px-3 lg:container mx-auto ">
       <div className="flex flex-col mt-20 lg:flex-row lg:items-end  lg:pl-[50px]  lg:gap-[40px]">
         <div className="relative ">
           <h1 className="font-[300] leading-[32px] text-white lg:leading-[64px] relative z-20 onest text-txt text-[32px] lg:text-[56px]">
