@@ -4,7 +4,7 @@ const Services = () => {
   return (
     <>
       <div className="w-full" >
-        <div className="px-3 lg:container py-5">
+        <div className="px-3 mx-auto lg:container py-5">
           <div
             className="text-center position-relative pb-3 mb-5 mx-auto"
             style={{ maxWidth: "600px" }}
