@@ -31,7 +31,7 @@ const Navbar = () => {
           <i onClick={() => setToggle(true)} className="fa fa-bars  cursor-pointer text-[30px]  text-white -ml-[1px] "></i>
         </div>
         <div className=" hidden lg:flex items-center gap-2">
-          <a
+          {/* <a
             className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
             href=""
           >
@@ -60,7 +60,7 @@ const Navbar = () => {
             href=""
           >
             <i className="fab -ml-[2px] fa-youtube fw-normal"></i>
-          </a>
+          </a> */}
         </div>
       </div>
       {toggle && <div className="lg:hidden fixed flex flex-col h-full items-center justify-between top-0 py-[6px] px-3 left-0 w-full min-h-screen bg-dark z-[99]">
@@ -86,7 +86,7 @@ const Navbar = () => {
           <ActiveLinkMobile href={"https://calendly.com/d/5cz-73r-4nv"} schedule={true} children={"Schedule Meeting"} />
         </div>
         <div className="flex items-center pb-5 gap-2">
-          <a
+          {/* <a
             className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
             href=""
           >
@@ -115,7 +115,7 @@ const Navbar = () => {
             href=""
           >
             <i className="fab -ml-[2px] fa-youtube fw-normal"></i>
-          </a>
+          </a> */}
         </div>
       </div>}
     </div>
