@@ -20,12 +20,13 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="hidden lg:flex items-center gap-3">
-          <ActiveLink href={"/"} children={"Home"} />
-
-          <ActiveLink href={"/about"} children={"About"} />
-          <ActiveLink href={"/services"} children={"Services"} />
-          <ActiveLink href={"/blogs"} children={"Blog"} />
-          <ActiveLink href={"https://calendly.com/d/5cz-73r-4nv"} schedule={true} children={"Schedule Meeting"} />
+          <ActiveLink href="/">Home</ActiveLink>
+          <ActiveLink href="/about">About</ActiveLink>
+          <ActiveLink href="/services">Services</ActiveLink>
+          <ActiveLink href="/blogs">Blog</ActiveLink>
+          <ActiveLink href="https://calendly.com/d/5cz-73r-4nv" schedule>
+            Schedule Meeting
+          </ActiveLink>
         </div>
         <div className="lg:hidden">
           <i onClick={() => setToggle(true)} className="fa fa-bars  cursor-pointer text-[30px]  text-white -ml-[1px] "></i>
@@ -49,11 +50,13 @@ const Navbar = () => {
           <i onClick={() => setToggle(false)} className="fa fa-times   cursor-pointer text-[30px]  text-white -ml-[1px] "></i>
         </div>
         <div className="flex items-center flex-col">
-          <ActiveLinkMobile href={"/"} children={"Home"} />
-          <ActiveLinkMobile href={"/about"} children={"About"} />
-          <ActiveLinkMobile href={"/services"} children={"Services"} />
-          <ActiveLinkMobile href={"/blogs"} children={"Blog"} />
-          <ActiveLinkMobile href={"https://calendly.com/d/5cz-73r-4nv"} schedule={true} children={"Schedule Meeting"} />
+          <ActiveLinkMobile href="/">Home</ActiveLinkMobile>
+          <ActiveLinkMobile href="/about">About</ActiveLinkMobile>
+          <ActiveLinkMobile href="/services">Services</ActiveLinkMobile>
+          <ActiveLinkMobile href="/blogs">Blog</ActiveLinkMobile>
+          <ActiveLinkMobile href="https://calendly.com/d/5cz-73r-4nv" schedule>
+            Schedule Meeting
+          </ActiveLinkMobile>
         </div>
         <div className="flex items-center pb-5 gap-2" />
       </div>}

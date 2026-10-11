@@ -172,7 +172,7 @@ const Testimonials = () => {
         >
 
           {[1, 2, 3, 4, 5].map((item, ind) => (
-            <SwiperSlide>
+            <SwiperSlide key={item}>
               <div className="w-full overflow-hidden  relative">
                 <Image
                   alt="logo"

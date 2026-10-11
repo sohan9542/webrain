@@ -7,6 +7,7 @@ const Startup = () => {
         <Image
           width={1200}
           height={600}
+          alt="Startup collaboration"
           className="w-full h-[400px] lg:h-[550px] s_img object-cover"
           src={"/img/s1.jpg"}
         />
