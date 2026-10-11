@@ -1,8 +1,8 @@
 "use client"
 
 import ServiceHero from '@/components/service/ServiceHero'
-import Footer from '@/layouts/Footer'
-import Navbar from '@/layouts/Navbar'
+import Footer from '@/components/layout/Footer'
+import Navbar from '@/components/layout/Navbar'
 import React from 'react'
 
 import DescribeService from '@/components/service/DescribeService'

@@ -3,17 +3,27 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 import 'swiper/css/effect-coverflow';
-import { get__reviews } from "@/sanity/api";
+import { getReviews } from "@/lib/sanity/api";
 const Testimonials = () => {
   const [active, setActive] = useState(100);
 
-  const [reviews, setReviews] = useState([])
+  const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    async function get__new__reviesw() {
-      const reiveew = await get__reviews();
-      setReviews(reiveew);
+    let cancelled = false;
+
+    async function loadReviews() {
+      try {
+        const nextReviews = await getReviews();
+        if (!cancelled) setReviews(nextReviews);
+      } catch {
+        if (!cancelled) setReviews([]);
+      }
     }
-    get__new__reviesw();
+
+    loadReviews();
+    return () => {
+      cancelled = true;
+    };
   }, []);
   return (
     <div className="px-3 lg:container mx-auto ">

@@ -1,20 +1,29 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-// import Swiper from "swiper";
 import "swiper/css/effect-creative";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay, EffectCreative, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
-import { get__projects } from "@/sanity/api";
+import { getProjects } from "@/lib/sanity/api";
 const Explore = () => {
   const [hover1, sethover1] = useState(100);
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    async function get__new__projects() {
-      const project = await get__projects();
-      setProjects(project);
+    let cancelled = false;
+
+    async function loadProjects() {
+      try {
+        const nextProjects = await getProjects();
+        if (!cancelled) setProjects(nextProjects);
+      } catch {
+        if (!cancelled) setProjects([]);
+      }
     }
-    get__new__projects();
+
+    loadProjects();
+    return () => {
+      cancelled = true;
+    };
   }, []);
   return (
     <div className="px-3 lg:px-[20px] pb-[24px]  lg:py-[80px]">

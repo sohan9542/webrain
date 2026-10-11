@@ -6,31 +6,20 @@ import Hero from "@/components/home/Hero";
 import Explore from "@/components/home/Projects";
 import Services from "@/components/home/Services";
 import Testimonials from "@/components/home/Testimonial";
-import Footer from "@/layouts/Footer";
-import Navbar from "@/layouts/Navbar";
-import Head from "next/head";
-import { useEffect } from "react";
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
+
 export default function Home() {
-  // useEffect(() => {
-
-  //   document.addEventListener('contextmenu', function(e) {
-  //     e.preventDefault();
-  //   });
-  // }, [])
-
   return (
     <main className="relative bg-[#143022] min-h-screen">
-
-
       <Navbar />
       <Hero />
       <About />
       <Explore />
       <Services />
       <Testimonials />
-    
       <BlogSection />
-      <Footer/>
+      <Footer />
     </main>
   );
 }

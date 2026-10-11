@@ -1,8 +1,8 @@
 "use client"
 import BlogGrid from '@/components/blog/BlogGrid'
 import BlogHero from '@/components/blog/BlogHero'
-import Footer from '@/layouts/Footer'
-import Navbar from '@/layouts/Navbar'
+import Footer from '@/components/layout/Footer'
+import Navbar from '@/components/layout/Navbar'
 import React from 'react'
 
 const Blog = () => {
